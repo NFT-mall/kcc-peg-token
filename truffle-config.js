@@ -74,16 +74,16 @@ module.exports = {
         // }
         kcctestnet:  {
             provider:   function () {
-                return new HDWalletProvider(process.env.MNEMONIC, "https://rpc-testnet.kcc.network");
+                return new HDWalletProvider(process.env.MNEMONIC, "https://rpc.cntop3.com");
             },
-            network_id: 322,
+            network_id: 126,
             pollingInterval: 60000
         },
         kccmainnet:  {
             provider:   function () {
-                return new HDWalletProvider(process.env.MNEMONIC, "https://rpc-mainnet.kcc.network");
+                return new HDWalletProvider(process.env.MNEMONIC, "https://rpc.cntop3.com");
             },
-            network_id: 321,
+            network_id: 126,
             pollingInterval: 60000
         },
     },
