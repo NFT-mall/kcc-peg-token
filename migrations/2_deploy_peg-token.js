@@ -2,8 +2,8 @@ const {table}       = require("table");
 const ERC20Factory  = artifacts.require("ERC20Factory");
 const ERC20PegToken = artifacts.require("ERC20PegToken");
 const tokens        = require("../config/testnet.json");
-const prefix        = "KCC-Peg ";
-const faucet        = "0xdee135b633d4cc342b2d59584e25fa8c4c88bcdc";
+const prefix        = "OY-Peg ";
+const faucet        = "0xDe579Ba175f10e7407C499226b2b1841C0e8C6a3";
 const result        = [["name", "symbol", "decimals", "address"]];
 
 module.exports = async function (deployer, network, accounts) {
@@ -23,7 +23,7 @@ module.exports = async function (deployer, network, accounts) {
 
         const address = await factory.tokens(index);
         const erc20   = await ERC20PegToken.at(address);
-        await erc20.mint(faucet, "1000000000000000000000000", {from: minter});
+        await erc20.mint(faucet, "1690000000000000000000000", {from: minter});
 
         params.push(address);
         result.push(params);
